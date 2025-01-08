@@ -11,8 +11,8 @@ PROXMOX_PASSWORD="Azerty/123"
 PVE_PASSWORD="Azerty/123"
 
 # Variables fichiers ISO
-OPNSENSE_ISO="/var/lib/vz/template/iso/OPNsense-24.7-dvd-amd64.iso"
-DEBIAN_ISO="/var/lib/vz/template/iso/debian-12.8.0-amd64-DVD-1.iso"
+OPNSENSE_ISO=""
+DEBIAN_ISO=""
 
 # Variables Stockage
 declare -A STORAGE_CONFIGS=(
@@ -26,3 +26,6 @@ declare -A DISK_CONFIGS=(
     ["PfSenseTemplate"]="16G"
     ["WebServerTemplate"]="16G"
 )
+
+# Variable Interface physique bridged sur VLAN10
+NETWORK_INTERFACE="ens34"
