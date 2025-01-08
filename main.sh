@@ -3,7 +3,7 @@
 # Charger les autres fichiers
 source ./variables.sh
 source ./setup_storage.sh
-source ./setup_openvswitch.sh
+source ./setup_appliance.sh
 source ./setup_users.sh
 source ./create_vms.sh
 
