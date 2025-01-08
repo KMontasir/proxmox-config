@@ -17,8 +17,7 @@ DEBIAN_ISO=""
 # Variables Stockage
 declare -A STORAGE_CONFIGS=(
     ["local-lvm-thin"]="/dev/sdb"
-    ["local-lvm-thin2"]="/dev/sdc"
-    #["cloud-init"]="/dev/sdd"
+    ["cloud-init"]="/dev/sdc"
 )
 
 # Variables Disque pour les VMs
