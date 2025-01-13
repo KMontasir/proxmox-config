@@ -2,10 +2,10 @@
 
 # Fonction pour créer les VMs avec configuration matérielle complète
 create_vms() {
-    VM_STORAGE="local-lvm-thin"
+    VM_STORAGE="local-lvm-template"
 
     echo "Création des groupes de ressources..."
-    for pool in Pare-Feu zone-relais zone-exposee service-interne template; do
+    for pool in pare-Feu zone-relais zone-exposee service-interne template testing; do
         pveum pool add $pool
     done
 
