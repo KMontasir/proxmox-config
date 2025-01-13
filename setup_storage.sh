@@ -20,15 +20,6 @@ create_lvm() {
         lvcreate --type thin-pool -l 100%FREE -n thinpool "$storage"
 
         # Ajout de la configuration dans le fichier /etc/pve/storage.cfg
-        if [[ "$storage" == "cloud-init" ]]; then
-            # Si c'est le stockage Cloud-Init, ajoutez-le avec un type spécifique
-            echo "
-lvmthin: $storage
-    vgname $storage
-    thinpool thinpool
-    content vztmpl,rootdir" >> /etc/pve/storage.cfg
-        else
-            # Pour les autres stockages, restez comme dans la configuration précédente
             echo "
 lvmthin: $storage
     vgname $storage
